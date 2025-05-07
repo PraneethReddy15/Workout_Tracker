@@ -1,0 +1,455 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+  color: #5a49e3;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-info span {
+  font-weight: 500;
+}
+
+.logout-button {
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #eb0d0d;
+  color: white;
+}
+
+.dashboard-nav {
+  margin-bottom: 2rem;
+}
+
+.dashboard-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+.dashboard-nav a {
+  text-decoration: none;
+  color: #555;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+  color: #5a49e3;
+}
+
+.dashboard-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #5a49e3;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #5a49e3;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.add-workout-button {
+  /* background-color: #5a49e3; */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-workout-button:hover {
+  color: #4a3ad3;
+  text-decoration: underline;
+}
+
+.latest-workout-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.no-workouts {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.no-workouts p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.primary-button {
+  background-color: #5a49e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #4a3ad3;
+}
+
+.workout-details h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.workout-info {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.intensity {
+  text-transform: capitalize;
+}
+
+.intensity.low {
+  color: #43a047;
+}
+
+.intensity.medium {
+  color: #fb8c00;
+}
+
+.intensity.high {
+  color: #e53935;
+}
+
+.recent-workouts-section {
+  margin-bottom: 2rem;
+}
+
+.view-all {
+  color: #5a49e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.recent-workouts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.workout-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.workout-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.workout-item-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.workout-date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.workout-item-details {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.no-data-message {
+  text-align: center;
+  color: #666;
+  padding: 1.5rem;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid #eaeaea;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #5a49e3;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .dashboard-nav ul {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  
+  .workout-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .add-workout-button {
+    width: 100%;
+  }
+}
+
+.recent-workouts-section {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.view-all {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.view-all:hover {
+  color: #0056b3;
+}
+
+.recent-workouts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.workout-item {
+  background-color: #ffffff;
+  border-left: 4px solid #007bff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workout-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.workout-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workout-item-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #343a40;
+}
+
+.workout-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.workout-item-details {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.intensity {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  width: fit-content;
+  margin-top: 0.4rem;
+}
+
+.intensity.low {
+  background-color: #28a745;
+  color: white;
+}
+
+.intensity.medium {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.intensity.high {
+  background-color: #dc3545;
+  color: white;
+}
+
+.workout-body-parts {
+  /* margin-top: 0.4rem; */
+  font-weight: 500;
+  color: #444;
+}
+
+.body-parts-list {
+  padding-left: 0;  /* Removed padding for a cleaner look */
+  margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;  /* Allows list items to wrap if they don't fit in one row */
+  gap: 1.5rem;  /* Adjusted the gap between items */
+}
+
+.body-parts-list li {
+  list-style: none;  /* Removed list numbering */
+  background-color: #f4f4f9;  /* Soft background color */
+  padding: 1rem;  /* Add some padding inside each list item */
+  border-radius: 8px;  /* Rounded corners */
+  color: #333;  /* Darker text color for contrast */
+  font-size: 1rem;  /* Slightly bigger font size for readability */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for depth */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+.body-parts-list li:hover {
+  background-color: #e0e0e0;  /* Slightly darker on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Stronger shadow on hover */
+}
+
+@media (max-width: 600px) {
+  .body-parts-list {
+    flex-direction: column;  /* Stack items vertically on smaller screens */
+  }
+}
+

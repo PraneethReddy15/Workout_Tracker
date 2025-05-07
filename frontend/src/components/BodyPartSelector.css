@@ -1,0 +1,169 @@
+/* .body-part-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 2rem;
+  }
+  
+  .body-image-container {
+    position: relative;
+    width: 240px;
+    height: 400px;
+    margin-bottom: 2rem;
+  }
+  
+  .body-silhouette {
+    width: 150%;
+    height: 150%;
+  }
+  
+  .body-silhouette svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .body-part-btn {
+    position: absolute;
+    background-color: rgba(90, 73, 227, 0.2);
+    color: #5a49e3;
+    border: 2px solid #5a49e3;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+  }
+  
+  .body-part-btn:hover {
+    background-color: rgba(90, 73, 227, 0.3);
+  }
+  
+  .body-part-btn.selected {
+    background-color: #5a49e3;
+    color: white;
+  }
+  
+  .body-part-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .body-part-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .body-part-checkbox:hover {
+    background-color: rgba(90, 73, 227, 0.1);
+  }
+  
+  .body-part-checkbox input {
+    margin-right: 0.5rem;
+    accent-color: #5a49e3;
+    cursor: pointer;
+  }
+  
+  .body-part-checkbox span {
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .body-image-container {
+      width: 180px;
+      height: 300px;
+    }
+    
+    .body-part-btn {
+      width: 30px;
+      height: 30px;
+      font-size: 0.7rem;
+    }
+    
+    .body-part-checkboxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  } */
+
+  .body-part-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #f7f8fa, #e0e5ec);
+    min-height: 20vh;
+  }
+  
+  .body-images-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .body-image-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+  }
+  
+  .body-silhouette svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .body-part-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffcc;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 0.4rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .body-part-btn:hover {
+    background-color: #0b0c0c;
+    color: white;
+    border-color: #0c0d0e;
+  }
+  
+  .body-part-btn.selected {
+    background-color: #0a0a0b;
+    color: white;
+    border-color: #040404;
+  }
+  
+  .body-part-checkboxes {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .body-part-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  

@@ -1,0 +1,292 @@
+.workout-history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .workout-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 1.5rem;
+  }
+  
+  .workout-history-header h1 {
+    color: #5a49e3;
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  .back-link:hover{
+    text-decoration: underline;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .filter-group select,
+  .filter-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+  }
+  
+  .filter-buttons button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .filter-apply {
+    background-color: #5a49e3;
+    color: white;
+  }
+  
+  .filter-apply:hover {
+    background-color: #4a3ad3;
+  }
+  
+  .filter-reset {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .filter-reset:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .workouts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .workout-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .workout-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workout-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .workout-card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .workout-date {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .workout-details {
+    margin-bottom: 1rem;
+  }
+  
+  .workout-details p {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .workout-details span:first-child {
+    color: #666;
+  }
+  
+  .workout-details span:last-child {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .workout-intensity {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .intensity-low {
+    background-color: #e8f5e9;
+    color: #43a047;
+  }
+  
+  .intensity-medium {
+    background-color: #fff3e0;
+    color: #fb8c00;
+  }
+  
+  .intensity-high {
+    background-color: #ffebee;
+    color: #e53935;
+  }
+  
+  .workout-body-parts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .body-part-tag {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .workout-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .workout-actions button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+  }
+  
+  .edit-button:hover {
+    color: #5a49e3;
+  }
+  
+  .delete-button:hover {
+    color: #e53935;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+  
+  .pagination button {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .pagination button:hover:not(.active, :disabled) {
+    background-color: #f5f5f5;
+  }
+  
+  .pagination button.active {
+    background-color: #5a49e3;
+    color: white;
+    border-color: #5a49e3;
+  }
+  
+  .pagination button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .no-workouts {
+    text-align: center;
+    padding: 3rem 0;
+    color: #666;
+  }
+  
+  .no-workouts p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .add-workout-button {
+    /* background-color: #5a49e3; */
+    color: #6c63ff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .workout-history-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .filter-buttons {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .filter-buttons button {
+      flex: 1;
+      padding: 0.75rem 0.5rem;
+    }
+    
+    .workout-card-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .workouts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
